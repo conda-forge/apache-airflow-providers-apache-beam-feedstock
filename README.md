@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-apache-beam` from the `conda-forge` channel
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-apache-beam` can be installed with:
