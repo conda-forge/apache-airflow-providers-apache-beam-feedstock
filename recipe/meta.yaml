@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
+    - pip
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
-    - apache-beam
     - python >=3.6
+    - apache-airflow >=2.0.0
+    - apache-beam >=2.20.0
 
 test:
   imports:
