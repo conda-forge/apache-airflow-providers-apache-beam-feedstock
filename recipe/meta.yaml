@@ -22,7 +22,7 @@ requirements:
     - wheel
   run:
     - python >=3.6
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - apache-beam >=2.20.0
 
 test:
