@@ -19,11 +19,10 @@ requirements:
     - python >=3.6
     - pip
     - setuptools
-    - wheel
   run:
     - python >=3.6
     - apache-airflow >=2.1.0
-    - apache-beam >=2.20.0
+    - apache-beam >=2.33.0
 
 test:
   imports:
