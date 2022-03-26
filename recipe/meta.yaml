@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-beam" %}
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-beam-{{ version }}.tar.gz
-  sha256: ee05445cda10c8c4407b7b2347ec09b4277d2505d587ff4ea944ad680175a830
+  sha256: f77afd35c7da2dcf3fdf4d1af394e3718f1869b4cc65e2a944def0668fb8a6fb
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
     - apache-beam >=2.33.0
 
@@ -35,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Beam for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-beam package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-beam/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
