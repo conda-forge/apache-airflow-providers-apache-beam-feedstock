@@ -21,13 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
-    - apache-beam >=2.33.0
+    - apache-airflow >=2.2.0
+    - apache-beam >=2.39.0
 
 test:
   imports:
     - airflow.providers.apache.beam
-    - airflow.providers.apache.beam.example_dags
+    - airflow.providers.apache.beam.hooks
   commands:
     - pip check
   requires:
