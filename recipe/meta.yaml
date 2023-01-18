@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-beam" %}
-{% set version = "4.1.0" %}
+{% set version = "4.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-beam-{{ version }}.tar.gz
-  sha256: 0627690ef316f7e823275f355cb8c6f09628c47e4db72356f6f607585e03f48f
+  sha256: 04b8a20f755f7be441d0a986a467295b96b2bfc22681334f4406dd84208b9a8e
 
 build:
   noarch: python
