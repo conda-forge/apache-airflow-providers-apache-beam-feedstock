@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-beam" %}
-{% set version = "5.9.0" %}
+{% set version = "5.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_beam-{{ version }}.tar.gz
-  sha256: 761fcaad6522a46a9512c9863de4bd65c7063df7a831df77625c02c95ae4c5ed
+  sha256: febf7228c16b9753bf8869d4067ae3903c065adf5aa8907a3066f7d008d493de
 
 build:
   noarch: python
@@ -16,14 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
+    - python >={{ python_min }}
     - apache-airflow >=2.8.0
     - apache-beam >=2.53.0
     - pyarrow >=14.0.1
+    # temporary constraint to get past pip check
+    - async-timeout >=4.0,<5.0
 
 test:
   imports:
@@ -31,6 +33,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
