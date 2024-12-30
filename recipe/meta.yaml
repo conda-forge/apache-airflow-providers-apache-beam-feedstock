@@ -24,8 +24,6 @@ requirements:
     - apache-airflow >=2.9.0
     - apache-beam >=2.53.0
     - pyarrow >=14.0.1
-    # temporary constraint to get past pip check
-    - async-timeout >=4.0,<5.0
 
 test:
   imports:
