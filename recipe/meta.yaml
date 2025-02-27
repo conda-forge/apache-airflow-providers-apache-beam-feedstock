@@ -20,11 +20,12 @@ requirements:
     - flit-core ==3.10.1
     - pip
   run:
-    - numpy >=1.26.0
     - python >={{ python_min }}
     - apache-airflow >=2.9.0
-    - apache-beam >=2.53.0
+    # using the more restrictive so we can be noarch: python
+    - apache-beam >=2.57.0
     - pyarrow >=14.0.1
+    - numpy >=1.26.0
 
 test:
   imports:
@@ -39,7 +40,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-beam for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/apache/beam/LICENSE
+  license_file: src/airflow/providers/apache/beam/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-beam/stable/index.html
   dev_url: https://github.com/apache/airflow/
