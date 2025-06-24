@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-beam" %}
-{% set version = "6.1.0" %}
+{% set version = "6.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_beam-{{ version }}.tar.gz
-  sha256: 51cd55bb3b5eec8361e7af583f9cdb90964df5b0ad862a569f5cb7be773e2462
+  sha256: 856d9ae07c2eb5aaa720d39c1099d25aecace5c74a51dea7b6e1b0a43f36948a
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     # using the more restrictive so we can be noarch: python
-    - apache-beam >=2.53.0
+    - apache-beam >=2.60.0
     - pyarrow >=14.0.1
     - numpy >=1.26.0
 
