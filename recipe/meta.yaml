@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-apache-beam" %}
 {% set version = "6.1.4" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -23,10 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    # using the more restrictive so we can be noarch: python
     - apache-beam >=2.60.0
     - pyarrow >=16.1.0
-    - numpy >=1.23.2
+    # using the most restrictive so we can be noarch: python
+    - numpy >=1.26.0
 
 test:
   imports:
