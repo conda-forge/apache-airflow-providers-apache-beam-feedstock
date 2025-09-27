@@ -25,7 +25,7 @@ requirements:
     - apache-beam >=2.60.0
     - pyarrow >=16.1.0
     # using the most restrictive so we can be noarch: python
-    - numpy >=1.23.2
+    - numpy >=1.26.0
 
 test:
   imports:
