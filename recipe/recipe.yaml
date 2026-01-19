@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-beam
-  version: "6.2.1"
+  version: "6.2.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_beam-${{ version }}.tar.gz
-  sha256: dbdd93a6a4d6136e71ccd2d3bdce2f16e96646db2b439864b4e443d571a82cae
+  sha256: c3e74f3fadae5d82a18eca19a0a49ea07eb79464877a61138c06fff7dc61edf0
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ requirements:
 tests:
   - python:
       imports:
-      - airflow.providers.apache.beam
+        - airflow.providers.apache.beam
       pip_check: true
       python_version: ${{ python_min }}.*
 
