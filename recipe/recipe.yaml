@@ -19,20 +19,24 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
     - apache-beam >=2.76.0
-    - pyarrow >=16.1.0
-    - numpy >=1.22.4
+    # tightest of upstream's floors (python >=3.14)
+    - pyarrow >=22.0.0
+    # tightest of upstream's floors (python >=3.14)
+    - numpy >=2.4.3
 tests:
   - python:
       imports:
         - airflow.providers.apache.beam
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
