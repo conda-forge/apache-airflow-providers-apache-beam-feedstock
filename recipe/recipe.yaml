@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-beam
-  version: 6.3.0
+  version: 6.3.1
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_beam-${{ version }}.tar.gz
-  sha256: 650524f7f5dc1bd6f54c4f44fd05629aaa5befc903f7c4d7c6af9644dd29ce42
+  sha256: 1bb80708560311960cdc07f3f7b639e95fd81f10d3b30a76560f9901da05899e
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
